@@ -73,14 +73,13 @@ public class AgentExceptionHandler {
     }
 
 
-    /*@ExceptionHandler(JwtException.class)
+    @ExceptionHandler(JwtException.class)
     public ResponseEntity<?> handleJWTException(JwtException ex) {
         Map<String, String> errors = new HashMap<>();
-        //errors.put("error", "Unauthorized.");
-        errors.put("error", ex.getMessage());
+        errors.put("error", "Unauthorized.");
         return new ResponseEntity<>(
                 errors,new HttpHeaders(), HttpStatus.UNAUTHORIZED);
-    }*/
+    }
 
     @ExceptionHandler(UnauthorizedException.class)
     public ResponseEntity<?> handleUnauthorizedException(UnauthorizedException ex) {

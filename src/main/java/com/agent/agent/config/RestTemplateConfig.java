@@ -27,40 +27,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 @Configuration
 public class RestTemplateConfig {
-//
-//    @Bean
-//    @LoadBalanced
-//    RestTemplate restTemplate (RestTemplateBuilder builder) {
-//        return builder
-//                .build();
-//    }
-//    private HttpComponentsClientHttpRequestFactory disabless(){
-//        TrustStrategy acceptingTrustStrategy = new TrustStrategy() {
-//            @Override
-//            public boolean isTrusted(X509Certificate[] X509Certificates, String s) throws CertificateException {
-//                return true;
-//            }
-//        };
-//        SSLContext sslcontext = null;
-//        try {
-//            sslcontext = org.apache.http.ssl.SSLContexts.custom().loadTrustMaterial(null,acceptingTrustStrategy).build();
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        } catch (KeyManagementException e) {
-//            e.printStackTrace();
-//        } catch (KeyStoreException e) {
-//            e.printStackTrace();
-//        }
-//        SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslcontext, new NoopHostnameVerifier());
-//        CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory (csf).build();
-//        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
-//        requestFactory.setHttpClient(httpClient);
-//        return requestFactory;
-//    }
-//
-//}
-
         @Bean
+        @LoadBalanced
         public RestTemplate restTemplate(RestTemplateBuilder builder) throws NoSuchAlgorithmException, KeyManagementException {
 
             TrustManager[] trustAllCerts = new TrustManager[] {
