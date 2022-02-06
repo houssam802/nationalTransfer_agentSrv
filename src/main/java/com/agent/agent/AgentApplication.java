@@ -15,9 +15,4 @@ public class AgentApplication {
 		SpringApplication.run(AgentApplication.class, args);
 	}
 
-	@Bean
-	@LoadBalanced
-	protected RestTemplate restTemplate(){
-		return new RestTemplate();
-	}
 }
