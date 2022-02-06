@@ -16,7 +16,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api_agent")
-//@CrossOrigin(allowCredentials = "true",  originPatterns = "*")
+@CrossOrigin(allowCredentials = "true",  originPatterns = "*")
 public class AgentController {
 
     private final AgentConverter agentConverter;
