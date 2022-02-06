@@ -3,3 +3,4 @@ spring:
     config:
       enabled: true
       uri: https://ensaconfig-serv.herokuapp.com
+#uri: https://ensaconfig-serv.herokuapp.com
