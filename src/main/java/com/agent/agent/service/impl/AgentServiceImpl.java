@@ -23,7 +23,7 @@ import java.util.List;
 @Service
 public class AgentServiceImpl implements AgentService {
 
-    private final String transfer_rest_url = "http://TRANSFER-SERVICE/api_transfer/";
+    private final String transfer_rest_url = "TRANSFER-SERVICE/api_transfer/";
     //private final String transfer_rest_url = "http://localhost:8082/api_transfer/";
     private final String client_rest_url = "http://localhost:9000/api_client/";
     private final String backoffice_rest_url = "http://localhost:8083/api/backoffice/";
