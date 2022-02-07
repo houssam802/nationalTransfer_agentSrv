@@ -24,9 +24,8 @@ import java.util.List;
 public class AgentServiceImpl implements AgentService {
 
     private final String transfer_rest_url = "https://ensa-transferapp.herokuapp.com/api_transfer/";
-    //private final String transfer_rest_url = "http://localhost:8082/api_transfer/";
-    private final String client_rest_url = "http://localhost:9000/api_client/";
-    private final String backoffice_rest_url = "http://localhost:8083/api/backoffice/";
+    private final String client_rest_url = "https://ensa-transferclientapp.herokuapp.com/api_client/";
+    private final String backoffice_rest_url = "https://ensa-backofficeapp.herokuapp.com/api_backoffice/";
 
     @Autowired
     private SoldeServiceImpl soldeService;
